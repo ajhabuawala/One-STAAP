@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <div class="row result-data clickable-row pointer">
+        <div class="col result-heading">
+            <h1>Luftansa</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>10:30 - 16:30</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        80 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Use of Sustainable Aviation Fuel
+                            Effecient Aircrafts
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-success">
+                    C02: {{co2_low}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        98%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row result-data">
+        <div class="col result-heading">
+            <h1>Cargolux</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>10:30 - 15:30</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-warning" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        60 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Use of Sustainable Aviation Fuel
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-warning">
+                    C02: {{co2_medium}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        98%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row result-data">
+        <div class="col result-heading">
+            <h1>Fedex</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>10:30 - 13:30</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        45 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Does not use effecient fuel
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-danger">
+                    C02: {{co2_high}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        98%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    {% endblock content %}

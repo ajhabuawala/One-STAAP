@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Request Quotation</legend>
+            <div class="row">
+                <div class="col-sm-3">
+                    {{ form.from_destination.label(class="form-control-label") }}
+                    {{ form.from_destination(class="form-control") }}
+                </div>
+                <div class="col-sm-3">
+                    {{ form.to_desination.label(class="form-control-label") }}
+                    {{ form.to_desination(class="form-control") }}
+                </div>
+                <div class="col-sm-1">
+                    {{ form.shipment_weight.label(class="form-control-label") }}
+                    {{ form.shipment_weight(class="form-control") }}
+                </div>
+                <div class="col-sm">
+                    {{ form.prefered_mot.label(class="form-control-label") }}
+                    {{ form.prefered_mot(class="form-select") }}
+                </div>
+                <div class="col-sm">
+                    {{ form.date_of_shipment.label(class="form-control-label") }}
+                    {{ form.date_of_shipment(class="form-select") }}
+                </div>
+
+            </div>
+        </fieldset>
+        <div class="row">
+            <div class="form-group pt-3 pb-3">
+                {{ form.submit(class="btn btn-outline-info")}}
+            </div>
+
+        </div>
+
+
+    </form>
+</div>
+{% endblock content %}

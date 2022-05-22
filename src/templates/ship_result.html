@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <div class="row search-heading">
+        <h1>Search Results:</h1>
+        <small class="text-muted ml-2">
+            <a href="/search">Back to Search</a>
+        </small>
+    </div>
+    <div class="row result-data clickable-row pointer">
+        <div class="col result-heading">
+            <h1>CPTM</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>12 Days</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        80 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Use of Sustainable Aviation Fuel
+                            Effecient Aircrafts
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-success">
+                    C02: {{co2_low_sea}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        45%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row result-data">
+        <div class="col result-heading">
+            <h1>TOWT</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>60 Days</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-warning" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        60 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Use of Sustainable Aviation Fuel
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-warning">
+                    C02: {{co2_medium_sea}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        75%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row result-data">
+        <div class="col result-heading">
+            <h1>LDA</h1>
+        </div>
+        <div class="col">
+            <div class="result-date">
+                <h5>55 Days</h5>
+            </div>
+
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <p>
+                    <button class="btn btn-danger" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        20 % Sustainable
+                    </button>
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <h6>What does that mean ?</h6>
+                        <p>
+                            Does not use effecient fuel
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="price-metric">
+                <button class="btn btn-danger">
+                    C02: {{co2_high_sea}}
+                </button>
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button type="button" class="btn btn btn-info position-relative">
+                    Reliability
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        90%
+                    </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="sustain-metric">
+                <button class="btn btn-primary me-md-2" type="button">Book Now</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    {% endblock content %}
